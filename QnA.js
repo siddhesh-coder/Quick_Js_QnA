@@ -101,3 +101,158 @@
 // }
 // let string = "Radar";
 // console.log(palindromeCheck(string));
+
+// const string = "Siddhesh";
+
+// function countAdd(string){
+//     let low = string.toLowerCase();
+//     let arrayOfString = low.split('');
+//     let compressed = "";
+//     let newArray = arrayOfString.reduce((acc,i) =>{
+//       if(!acc[i]){
+//         acc[i] = 1;
+//       }else{
+//         acc[i]++;
+//       }
+//       return acc;
+//     },{});
+
+//     for(const key in newArray){
+//       compressed += `${key}${newArray[key]}`;
+//     }
+//     return compressed;
+// }
+
+// console.log(countAdd(string));
+
+// function miniMaxSum(arr) {
+//   // Write your code here
+//    arr.sort((a,b)=>{
+//      return a-b;
+//   });
+//   let minSum = 0;
+//   let maxSum = 0;
+//   for(let i=0;i<arr.length-1;i++){
+//       minSum += arr[i]; 
+//   }
+
+//   for(let i=1;i<arr.length;i++){
+//       maxSum += arr[i];
+//  }
+  
+// return `${minSum} ${maxSum}`;
+// }
+
+// let array = [140638725,436257910,953274816,734065819,362748590];
+// console.log(miniMaxSum(array));
+
+// const nums1 = [1,2,2,1];
+// const nums2 = [2,2];
+
+// var intersection = function(nums1, nums2) {
+//   const set1 = new Set(nums1);
+//     const result = new Set();
+
+//     for (const num of nums2) {
+//         if (set1.has(num)) {
+//             result.add(num);
+//         }
+//     }
+
+//     return Array.from(result);
+// }
+
+// console.log(intersection(nums1,nums2));  //resolve the output should be [1,2]
+
+// var reverseStr = function(s, k) {
+//   let newStr = s.split('');
+//   for(let i=0;i<newStr.length;i+=2*k){
+//      let start = i;
+//     let end = Math.min(i + k - 1, newStr.length - 1);
+
+//     while (start < end) {
+//       [newStr[start], newStr[end]] = [newStr[end], newStr[start]];
+//       start++;
+//       end--;
+//     }
+//   }
+//   return newStr.join('');
+// };
+
+// let s = "abcdefg";
+// let k = 2;
+
+// console.log(reverseStr(s,k));
+
+
+// function sortt(s){
+//   return s.split('').sort().join('');
+// }
+
+// const s = "siddhesh";
+
+// console.log(sortt(s));
+
+// function upper(s){
+//   // let capStr = s.split(' ').map((word) => {
+//   //     let letter = word.split('');
+//   //     letter[0] = letter[0].toUpperCase();
+//   //     return letter.join('');
+//   //  });
+//   //  return capStr.join(' ');
+
+//    //Or
+//    //optimize
+//    let allwords = s.split(' ').map((word)=>{
+//       return word.charAt(0).toUpperCase() + word.substring(1);
+//    })
+//    return allwords.join(' ');
+// }
+
+// let string = "Hey, how is everything going on?";
+
+// console.log(upper(string));
+
+
+
+// function count(s){
+//    const newObj = s.split('').reduce((acc,i)=>{
+//          if(!acc[i]){
+//           acc[i] = 1;
+//          }else{
+//           acc[i]++;
+//          }
+//          return acc;
+//    }, {});
+//    return newObj;
+// }
+
+// const string = "Apple";
+
+// console.log(count(string));
+
+
+// function loop(a){
+//   const sum = a.reduce((acc,i)=>{
+//      acc += i;
+//      return acc;
+//   },0);
+//   return sum;
+// };
+
+// const array = [1,2,3,4,5];
+
+// console.log(loop(array));
+
+
+// function takeNum(a){
+//    const sum = a.reduce((acc,i)=>{
+//       if(typeof i !== 'string'){
+//          acc += i;
+//       }
+//       return acc;
+//    },0); 
+//    return sum;
+// }
+// const array = ['let',2,'const',4,'var',9];
+// console.log(takeNum(array));
