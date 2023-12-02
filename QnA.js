@@ -256,3 +256,151 @@
 // }
 // const array = ['let',2,'const',4,'var',9];
 // console.log(takeNum(array));
+
+
+
+// function grab(a){
+//     let males = a.filter((obj) => {
+//         if(obj.gender === 'male'){
+//           return obj;
+//         }
+//     });
+//     return males;
+
+//     //using loop
+
+//     // let newArr = [];
+//     // a.forEach(element => {
+//     //   if(element.gender === 'male'){
+//     //          newArr.push(element);
+//     //   }
+//     // });
+//     // return newArr;
+// };
+
+// const arrayOfObj = [{
+//   name: "siddhesh",
+//   gender: "male",
+//   city: "Pune"
+// },{
+//   name: "Shubham",
+//   gender: "male",
+//   city: "Pune"
+// },{
+//   name: "Kaira",
+//   gender: "female",
+//   city: "Pune"
+// },{
+//   name: "Ishani",
+//   gender: "female",
+//   city: "Pune"
+// }]
+
+// console.log(grab(arrayOfObj));
+
+
+//solved with prototype
+
+// Array.prototype.clone = function(){
+//     return [...this];
+// };
+
+// let array = [1,2,3,4,5];
+// let array2 = array.clone();
+// console.log(array2);
+
+
+// function checkType(input){
+//     return typeof input;
+// }
+
+// console.log(checkType(String));
+
+//from first 
+// function returnElement(array,n = 1){
+//   if(n > array.length){
+//     return `exceed the range ${array.length}`;
+//   }
+//    let give = [];
+//    for (let index = 0; index < n; index++) {
+//     give.push(array[index]);
+//    }
+//    return give;
+// }
+// const array = [1,2,3,4,5,6];
+
+// console.log(returnElement(array,4));
+
+//from last
+// function returnElement(array,n = 1){
+//   if(n > array.length){
+//     return `exceed the range ${array.length}`;
+//   }
+//    let give = [];
+//    for (let index = array.length-1; index > n; index--) {
+//     give.push(array[index]);
+//    }
+//    return give;
+// }
+// const array = [1,2,3,4,5,6];
+
+// console.log(returnElement(array,3));
+
+
+// function frequentItem(array){
+//    let obj = array.reduce((acc,i)=>{
+//      if(!acc[i]){
+//       acc[i] = 1;
+//      }else{
+//       acc[i]++;
+//      }
+//      return acc;
+//    },{});
+   
+//    let maxCount = 0;
+//    let frequentElement = null;
+//    for(const key in obj){
+//      if(maxCount < obj[key]){
+//       maxCount = obj[key];
+//       frequentElement = key;
+//      }
+//    }
+//    return frequentElement;
+// }
+// const array = [1,1,5,5,6,3,2,5,1,1];
+// console.log(frequentItem(array));
+
+//shuffle of array
+// Array.prototype.shuffle = function(){
+//      let index = this.length;
+
+//      while(index > 0){
+//        index--;
+//        let randomIndex = Math.floor(Math.random() * index);
+//        temp = this[index];
+//        this[index] = this[randomIndex];
+//        this[randomIndex] = temp;
+//      }
+//      return this;
+// }
+
+// let array = [1,2,3,4,5,6];
+
+// console.log(array.shuffle());
+
+// Array.prototype.union = function(){
+//      let set = new Set();
+
+//      this.forEach((element)=>{
+//         element.forEach((element2)=>{
+//           if(!set.has(element2)){
+//               set.add(element2);
+//           }
+//         });
+//      });
+//      return Array.from(set).sort((a,b) => a-b);
+// }
+
+// let array = [[1,2,3,4],[100,2,3,50],[9,4,1,6,4],[900,23,54,67,2,67]];
+
+// console.log(array.union());
